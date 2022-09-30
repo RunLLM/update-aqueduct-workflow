@@ -1,0 +1,24 @@
+name: 'Aqueduct Workflow Script Runner'
+description: 'Running an Aqueduct workflow script'
+inputs:
+  server_address:
+    description: 'IP address of the Aqueduct server'
+    required: true
+  port:
+    description: 'Port on which the server is listening'
+    required: false
+    default: 8080
+  api_key:
+    description: 'Api key to gain access to the server. This should be passed in as a GitHub secret'
+    required: true
+  path:
+    description: 'Path to the workflow script'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.server_address }}
+    - ${{ inputs.port }}
+    - ${{ inputs.api_key }}
+    - ${{ inputs.path }}
