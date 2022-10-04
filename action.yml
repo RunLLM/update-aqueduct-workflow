@@ -1,5 +1,5 @@
-name: 'Aqueduct Workflow Script Runner'
-description: 'Running an Aqueduct workflow script'
+name: 'Update an Aqueduct Workflow'
+description: 'This GitHub Action installs the `aqueduct-sdk` package and runs an Aqueduct workflow script.'
 inputs:
   server_address:
     description: 'IP address of the Aqueduct server'
