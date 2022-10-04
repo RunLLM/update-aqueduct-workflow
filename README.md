@@ -1,6 +1,8 @@
-# Aqueduct workflow script runner docker action
+# Update Aqueduct Workflow GitHub Action
 
 This action installs the `aqueduct-sdk` package and runs an Aqueduct workflow script.
+The workflow script can access the Aqueduct server address and the api key via environment variables
+"AQUEDUCT_SERVER_ADDRESS" and "AQUEDUCT_API_KEY".
 
 ## Inputs
 
